@@ -1,0 +1,14 @@
+{
+  "format_version": [1, 1, 0],
+  "moldy_food:moldy_cake": {
+    "textures": {
+      "up": "cake_top",
+      "down": "cake_bottom",
+      "north": "cake_side",
+      "south": "cake_side",
+      "east": "cake_side",
+      "west": "cake_side"
+    },
+    "geometry": "geometry.moldy_cake"
+  }
+}

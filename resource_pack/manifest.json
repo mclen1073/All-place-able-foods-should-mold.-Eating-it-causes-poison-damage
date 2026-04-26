@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Moldy Placeable Foods RP",
+    "description": "Model-only resource pack that binds moldy food blocks to vanilla textures.",
+    "uuid": "0c43210e-33cb-4515-acf2-6ddd07f8a3e6",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "73df9760-6e6f-468d-91bc-0f6ffba6fe70",
+      "version": [1, 0, 0]
+    }
+  ]
+}

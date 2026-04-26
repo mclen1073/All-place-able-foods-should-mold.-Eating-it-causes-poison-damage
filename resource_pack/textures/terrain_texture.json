@@ -1,0 +1,17 @@
+{
+  "resource_pack_name": "moldy_placeable_foods",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "cake_top": {
+      "textures": "textures/blocks/cake_top"
+    },
+    "cake_bottom": {
+      "textures": "textures/blocks/cake_bottom"
+    },
+    "cake_side": {
+      "textures": "textures/blocks/cake_side"
+    }
+  }
+}

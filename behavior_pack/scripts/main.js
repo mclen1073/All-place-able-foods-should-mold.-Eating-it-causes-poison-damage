@@ -1,5 +1,7 @@
 import { world } from "@minecraft/server";
 
+const MOLDY_BLOCK_ID = "moldy_food:moldy_cake";
+
 /**
  * A place-able food is any consumed item that has both:
  * - a food component (it can be eaten)
@@ -14,6 +16,16 @@ function isPlaceableFood(itemStack) {
   return hasFood && hasBlockPlacer;
 }
 
+world.afterEvents.playerPlaceBlock.subscribe((event) => {
+  const { block } = event;
+
+  if (!block || block.typeId !== "minecraft:cake") {
+    return;
+  }
+
+  block.setType(MOLDY_BLOCK_ID);
+});
+
 world.afterEvents.itemCompleteUse.subscribe((event) => {
   const { source, itemStack } = event;
 
@@ -21,7 +33,6 @@ world.afterEvents.itemCompleteUse.subscribe((event) => {
     return;
   }
 
-  // Mold effect: immediate hurt + poison over time.
   source.applyDamage(2);
   source.addEffect("poison", 200, {
     amplifier: 0,
